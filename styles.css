@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header {
+  width: 100vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: green;
+  color: white;
+}
+
+h1 {
+  font-size: large;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+input {
+  width: 8ch;
+}
+
+.input-group {
+  margin-top: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 2vh;
+}
+
+.output-group {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-align: center;
+  font-size: larger;
+}
+
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+}

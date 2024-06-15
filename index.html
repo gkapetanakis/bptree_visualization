@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <meta name="author" content="George Kapetanakis" />
+    <meta
+      name="description"
+      content="A B+ tree visualization website, implementing the structure as described in the book 'Database System Concepts, 7th ed.' by authors Avi Silberschatz, Henry F. Korth and S. Sudarshan."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title -->
+    <title>B+ Tree Visualization</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class><h1>B+ Tree Visualization</h1></header>
+
+    <main>
+      <div class="input-group">
+        <label for="n">Max. Degree</label>
+        <input type="number" id="n" value="4" autocomplete="off" />
+        <button onclick="setDegree()">Change</button>
+      </div>
+
+      <div class="input-group">
+        <label for="key">Key</label>
+        <input type="number" name="key" id="key" autocomplete="off" />
+        <button onclick="insertKey()">Insert</button>
+        <button onclick="deleteKey()">Delete</button>
+        <button onclick="undo()">Undo</button>
+      </div>
+
+      <div class="input-group">
+        <button onclick="resetTree()">Reset Tree (Cannot Undo)</button>
+        <button onclick="randomTree()">
+          Generate Random Tree (Cannot Undo)
+        </button>
+      </div>
+
+      <div class="output-group">
+        <div id="viz" style="padding-top: 10px; padding-bottom: 10px"></div>
+        <div
+          id="err-msg"
+          style="color: darkred; padding-top: 10px; padding-bottom: 10px"
+        ></div>
+      </div>
+    </main>
+
+    <footer>
+      View code on <a href="https://github.com/gkapetanakis">GitHub</a>
+    </footer>
+
+    <!-- javascript -->
+    <script type="module" defer>
+      import * as App from "./app.js";
+
+      window.setDegree = App.setDegree;
+      window.insertKey = App.insertKey;
+      window.deleteKey = App.deleteKey;
+      window.undo = App.undo;
+      window.resetTree = App.resetTree;
+      window.randomTree = App.randomTree;
+    </script>
+  </body>
+</html>
