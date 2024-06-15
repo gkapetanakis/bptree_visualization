@@ -111,6 +111,7 @@ export function randomTree() {
     } while (existing.includes(key));
     existing.push(key);
     insertKey(key, i === totalKeys - 1);
+    history.push(["insert", key]);
   }
 }
 
